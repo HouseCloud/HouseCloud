@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HouseCloud</string>
+    <string name="txvHC">House</string>
+    <string name="txvHC2">Cloud</string>
 </resources>
