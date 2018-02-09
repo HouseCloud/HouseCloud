@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "549527318391",
+    "firebase_url": "https://housecloud-1f4fb.firebaseio.com",
+    "project_id": "housecloud-1f4fb",
+    "storage_bucket": "housecloud-1f4fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549527318391:android:d1974a9c3b821a05",
+        "android_client_info": {
+          "package_name": "com.housecloud.housecloud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549527318391-t38cftbf4scqcsh7bkh4ahbldsmocjnc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.housecloud.housecloud",
+            "certificate_hash": "055e7a12d8726d2277dadf3a921386d67ac37cb8"
+          }
+        },
+        {
+          "client_id": "549527318391-e0tmt9ogn7l53hg3m9vjppmt7d4o1tfl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBprejTResORJCQirkEHew7OdvB4t4H14Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549527318391-e0tmt9ogn7l53hg3m9vjppmt7d4o1tfl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
