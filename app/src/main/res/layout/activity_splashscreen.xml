@@ -8,35 +8,11 @@
 
     <ImageView
         android:id="@+id/imglogo"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:background="@drawable/logo" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/imglogo"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true">
-
-        <TextView
-            android:id="@+id/textHouse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txvHC"
-            android:textSize="37sp" />
-
-        <TextView
-            android:id="@+id/txvCloud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txvHC2"
-            android:textColor="#FF5252"
-            android:textSize="37sp" />
-    </LinearLayout>
+        android:layout_marginTop="204dp"
+        android:background="@drawable/ic_logo" />
 
 </RelativeLayout>

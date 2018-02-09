@@ -2,4 +2,13 @@
     <string name="app_name">HouseCloud</string>
     <string name="txvHC">House</string>
     <string name="txvHC2">Cloud</string>
+    <string name="not_login">No se puede iniciar sesión</string>
+    <string name="not_firebase">No se pudo autentificar con Firebase</string>
+    <string name="facebook_app_id">946811222138035</string>
+    <string name="fb_login_protocol_scheme">fb946811222138035</string>
+    <string name="not_facebook">No se ha podido iniciar sesión</string>
+    <string name="error_facebook">Ha ocurrido un error</string>
+    <string name="txvLogin">Log in</string>
+    <string name="etUser">User</string>
+    <string name="etPassword">Password</string>
 </resources>
