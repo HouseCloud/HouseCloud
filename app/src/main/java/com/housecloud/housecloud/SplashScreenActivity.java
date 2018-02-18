@@ -1,18 +1,19 @@
 package com.housecloud.housecloud;
 
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.os.Handler;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.VideoView;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
     ImageView img;
+    VideoView vd;
     //TextView txvHouse, txvCloud;
 
     private static int SPLASH_TIME_OUT = 2500;
@@ -20,8 +21,31 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        img = (ImageView)findViewById(R.id.imglogo);
+        vd = (VideoView)findViewById(R.id.videoSplash);
+
+        Uri video = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.screensplash55);
+
+        vd.setVideoURI(video);
+
+        vd.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+
+                if (isFinishing())
+                    return;
+
+                Intent i = new Intent(SplashScreenActivity.this,MenuActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        vd.start();
+
+
+        /*img = (ImageView)findViewById(R.id.imglogo);
         //txvHouse = (TextView)findViewById(R.id.txvHouse);
         //txvCloud = (TextView)findViewById(R.id.txvCloud);
 
@@ -41,6 +65,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                 Intent i = new Intent(SplashScreenActivity.this,LoginActivity.class);
                 startActivity(i);
             }
-        },SPLASH_TIME_OUT);
+        },SPLASH_TIME_OUT);*/
+
+
     }
 }
