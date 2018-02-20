@@ -47,8 +47,8 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="185dp"
-            android:background="@drawable/menunube2" />
+            android:layout_height="150dp"
+            android:background="@drawable/nube" />
         <LinearLayout
             android:id="@+id/linearLayout"
             android:paddingTop="10dp"

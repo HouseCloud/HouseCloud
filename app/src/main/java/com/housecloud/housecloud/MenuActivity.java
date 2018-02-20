@@ -86,9 +86,9 @@ public class MenuActivity extends AppCompatActivity {
             holder.imageView.setImageBitmap(bitmaps[position]);
             if(position%2!=0){
                 //holder.imageView.setVisibility(View.INVISIBLE);
-                holder.itemView.setTranslationY(350+30);
+                holder.itemView.setTranslationY(350+50);
             }else{
-                holder.itemView.setTranslationY(30);
+                holder.itemView.setTranslationY(50);
             }
 
             Log.d("myTag", position+"");

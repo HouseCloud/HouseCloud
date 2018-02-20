@@ -5,58 +5,147 @@
     android:background="#FFF"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="400px"
-        android:layout_alignParentTop="true"
+    <LinearLayout
+        android:id="@+id/llDegradado"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/degradado"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <com.dd.ShadowLayout
+        android:id="@+id/panelLogin0"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:sl_shadowColor="#1AA00000"
+        app:sl_cornerRadius="15dp"
+        android:gravity="top|center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/ic_logo"
-        android:id="@+id/imageView" />
+        android:layout_marginLeft="80dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/llDegradado"
+        android:layout_marginTop="-50dp">
+
+        <LinearLayout
+            android:id="@+id/panelLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corners"
+           android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="User"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"/>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
 
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btnGoogle"
-        android:layout_width="wrap_content"
+
+        </LinearLayout>
+    </com.dd.ShadowLayout>
+
+    <Button
+        android:id="@+id/btNext"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_marginTop="-30dp"
+        android:layout_below="@+id/panelLogin0"
+        android:text="Next"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"></com.google.android.gms.common.SignInButton>
+        android:background="@drawable/cornersdegradado"
+        android:textColor="@android:color/white"
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btnFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnGoogle"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="26dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="User"
-        android:textColorHint="@color/colorAccent"
-        android:backgroundTint="@color/colorAccent"/>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/panelLogin1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Password"
-        android:textColorHint="@color/colorAccent"
-        android:backgroundTint="@color/colorAccent"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/btNext"
+        >
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+        </com.google.android.gms.common.SignInButton>
+
+        <com.facebook.login.widget.LoginButton
+            xmlns:facebook="http://schemas.android.com/apk/res-auto"
+            facebook:com_facebook_login_text=""
+            facebook:com_facebook_logout_text=""
+            android:id="@+id/btnFacebook"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+
+            />
+
+        <com.dd.ShadowLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:sl_shadowColor="#1AA00000"
+            app:sl_cornerRadius="15dp"
+            android:gravity="top|center"
+            >
+            <Button
+                android:background="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fb"
+                android:onClick="onClickFacebookButton"
+                android:textAllCaps="false"
+                android:text=""
+                android:textColor="#ffffff"
+                />
+        </com.dd.ShadowLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
 
 </RelativeLayout>

@@ -1,10 +1,12 @@
 package com.housecloud.housecloud;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -45,11 +47,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private CallbackManager callbackManager;
     private LoginButton loginButton;
 
+    private Button fb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(R.layout.activity_login);
+
+        fb = (Button) findViewById(R.id.fb);
+
         //CODIGO DE AUTENTICACION CON GOOGLE
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -62,8 +69,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
 
         signInButton = findViewById(R.id.btnGoogle);
-        signInButton.setSize(SignInButton.SIZE_WIDE);
-        signInButton.setColorScheme(SignInButton.COLOR_LIGHT);
+        signInButton.setSize(SignInButton.SIZE_ICON_ONLY);
+        /*signInButton.setColorScheme(SignInButton.COLOR_LIGHT);*/
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,6 +180,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 }
             }
         });
+    }
+
+    public void onClickFacebookButton(View view) {
+        if (view == fb) {
+            loginButton.performClick();
+        }
     }
 
 }
