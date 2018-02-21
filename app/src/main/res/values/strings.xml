@@ -14,4 +14,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="etName">Nombre</string>
+    <string name="etEmail">Email</string>
+    <string name="etPhone">Teléfono</string>
+    <string name="etCPostal">CP</string>
+    <string name="btnRegister">REGISTRAR</string>
 </resources>

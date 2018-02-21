@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.housecloud.housecloud.RegisterActivity">
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/etName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignStart="@+id/etName"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/etEmail"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEmail"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_below="@+id/etEmail"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/etPhone"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPhone"
+        android:layout_alignStart="@+id/etPhone"
+        android:layout_below="@+id/etPhone"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/etPassword"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <EditText
+        android:id="@+id/etCPostal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/etCPostal"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCPostal"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegistroUser"
+        android:layout_marginTop="30dp"
+        android:text="@string/btnRegister" />
+
+</RelativeLayout>
