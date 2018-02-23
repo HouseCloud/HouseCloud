@@ -7,10 +7,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -41,6 +43,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
+    private EditText etUser, etPwd;
+
     private GoogleApiClient googleApiClient;
     //private SignInButton signInButton;
     private final static int SIGN_IN_CODE = 777;
@@ -64,6 +68,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
 
 
+        etUser = findViewById(R.id.etUser);
+        etPwd = findViewById(R.id.etPwd);
+
         fb = (Button) findViewById(R.id.fb);
         //google = (Button) findViewById(R.id.google);
 
@@ -78,7 +85,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
                 .build();
 
-        signInButton = findViewById(R.id.signInButton);
+        //signInButton = findViewById(R.id.signInButton);
         //signInButton.setSize(SignInButton.SIZE_ICON_ONLY);
         /*signInButton.setColorScheme(SignInButton.COLOR_LIGHT);*/
 
@@ -98,7 +105,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 //De ser asi, no hará falta volver a iniciar sesión.
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
-                    //Intent siguiente al Login
+                    //Intent i = new Intent(LoginActivity.this,MenuActivity.class);
+                    //startActivity(i);
+                }else{
+                    Log.i("SESION","No hay ninguna sesión iniciada");
                 }
             }
         };
@@ -135,6 +145,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 }
             }
         });
+    }
+
+    //Codigo de Login con email y password;
+
+    public void inciarSesion(View v){
+        String user, pwd;
+        user = etUser.getText().toString();
+        pwd = etPwd.getText().toString();
+
+        firebaseAuth.getInstance().signInWithEmailAndPassword(user,pwd);
     }
 
     @Override
