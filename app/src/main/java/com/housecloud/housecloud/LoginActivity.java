@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -55,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private CallbackManager callbackManager;
     private LoginButton loginButton;
 
+    private Button btnForgot;
     private Button fb;
     private Button signInButton;
 
@@ -133,6 +135,38 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 Toast.makeText(getApplicationContext(),R.string.error_facebook, Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void OlvidarContrasenia(View v){
+        FirebaseAuth.getInstance().sendPasswordResetEmail("user@example.com")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Log.d(TAG, "Email sent.");
+                        }
+                    }
+                });
+
+        String email = etUser.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplication(), "Enter your registered email id", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        firebaseAuth.sendPasswordResetEmail(email)
+
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     private void handleFacebookAccessToken(AccessToken accessToken) {
