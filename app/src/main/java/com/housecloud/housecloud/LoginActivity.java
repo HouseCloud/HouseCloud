@@ -1,11 +1,15 @@
 package com.housecloud.housecloud;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -38,7 +42,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     private GoogleApiClient googleApiClient;
-    private SignInButton signInButton;
+    //private SignInButton signInButton;
     private final static int SIGN_IN_CODE = 777;
 
     private FirebaseAuth firebaseAuth;
@@ -48,14 +52,20 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private LoginButton loginButton;
 
     private Button fb;
+    private Button signInButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(R.layout.activity_login);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
+
 
         fb = (Button) findViewById(R.id.fb);
+        //google = (Button) findViewById(R.id.google);
 
         //CODIGO DE AUTENTICACION CON GOOGLE
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -68,8 +78,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
                 .build();
 
-        signInButton = findViewById(R.id.btnGoogle);
-        signInButton.setSize(SignInButton.SIZE_ICON_ONLY);
+        signInButton = findViewById(R.id.signInButton);
+        //signInButton.setSize(SignInButton.SIZE_ICON_ONLY);
         /*signInButton.setColorScheme(SignInButton.COLOR_LIGHT);*/
 
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -182,10 +192,18 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         });
     }
 
-    public void onClickFacebookButton(View view) {
+    public void onClickLoginButtons(View view) {
         if (view == fb) {
             loginButton.performClick();
+        }else if (view == signInButton){
+            Intent i = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+            startActivityForResult(i,SIGN_IN_CODE);
         }
+    }
+
+    public void methodRegistrar(View view) {
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
     }
 
 }

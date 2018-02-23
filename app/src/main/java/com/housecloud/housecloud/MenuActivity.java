@@ -25,7 +25,6 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(R.layout.activity_menu);
         rvMain = (RecyclerView)findViewById(R.id.rvMain);
         bt = (Button) findViewById(R.id.menu);
