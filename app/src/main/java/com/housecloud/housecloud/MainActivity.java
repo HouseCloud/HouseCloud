@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         startActivity(intent);
     }
     private void setUserData(FirebaseUser user) {
-            /*View headerView = navigationView.getHeaderView(0);
+            View headerView = navigationView.getHeaderView(0);
             emailUser = (TextView) headerView.findViewById(R.id.emailUser);
             emailUser.setText(user.getEmail());
 
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             nameUser.setText(user.getDisplayName());
 
             userPhoto = headerView.findViewById(R.id.userPhoto);
-            Glide.with(this).load(user.getPhotoUrl()).into(userPhoto);*/
+            Glide.with(this).load(user.getPhotoUrl()).into(userPhoto);
 
         }
     }
