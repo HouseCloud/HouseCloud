@@ -97,7 +97,7 @@
                         android:textStyle="bold"/>
 
                     <EditText
-                        android:id="@+id/editText"
+                        android:id="@+id/etUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -114,7 +114,7 @@
                         android:textStyle="bold"/>
 
                     <EditText
-                        android:id="@+id/editText2"
+                        android:id="@+id/etPwd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
@@ -150,6 +150,7 @@
             android:background="@drawable/cornersdegradado"
             android:textColor="@android:color/white"
             android:layout_marginTop="-32dp"
+            android:onClick=""
             />
 
     </LinearLayout>

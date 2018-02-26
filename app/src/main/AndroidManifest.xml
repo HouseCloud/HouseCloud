@@ -23,9 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity0" />
-        <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".ForgotPassword" />
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_menu"

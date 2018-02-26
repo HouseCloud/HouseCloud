@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -26,6 +27,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
+
+    private EditText etUser, etPwd;
 
     private GoogleApiClient googleApiClient;
     //private SignInButton signInButton;
@@ -54,6 +57,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+
+        etUser = findViewById(R.id.etUser);
+        etPwd = findViewById(R.id.etPwd);
 
         //Boton original de google
         /*signInButton = (SignInButton) findViewById(R.id.signInButton);
@@ -157,5 +163,11 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             Intent i = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
             startActivityForResult(i,SIGN_IN_CODE);
         }
+    }
+
+    public void olvidarPassword(View view) {
+        Intent i = new Intent(this, ForgotPassword.class);
+        i.putExtra("email",etUser.getText().toString().trim());
+        startActivity(i);
     }
 }
