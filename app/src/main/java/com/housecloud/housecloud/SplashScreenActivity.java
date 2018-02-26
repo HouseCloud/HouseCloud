@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.VideoView;
 
@@ -36,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 if (isFinishing())
                     return;
 
-                Intent i = new Intent(SplashScreenActivity.this,MenuActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this,MenuActivity0.class);
                 startActivity(i);
                 finish();
             }
@@ -62,7 +61,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreenActivity.this,LoginActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this,LoginActivity0.class);
                 startActivity(i);
             }
         },SPLASH_TIME_OUT);*/

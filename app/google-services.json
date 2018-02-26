@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "549527318391-mm0tqs8eg5qm8udc3b8icclr9ti6kun0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.housecloud.housecloud",
+            "certificate_hash": "55d3ca942acc183e19cae00567bc191c10e5a585"
+          }
+        },
+        {
           "client_id": "549527318391-t38cftbf4scqcsh7bkh4ahbldsmocjnc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

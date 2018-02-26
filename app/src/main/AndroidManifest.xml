@@ -16,15 +16,25 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".RegisterActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MenuActivity0" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".LoginActivity0" />
+        <activity
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

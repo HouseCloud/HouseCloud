@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HouseCloud.iml" filepath="$PROJECT_DIR$/.idea/HouseCloud.iml" />
-      <module fileurl="file://C:\Users\21642432\AndroidStudioProjects\HouseCloud\HouseCloud.iml" filepath="C:\Users\21642432\AndroidStudioProjects\HouseCloud\HouseCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HouseCloud.iml" filepath="$PROJECT_DIR$/HouseCloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
