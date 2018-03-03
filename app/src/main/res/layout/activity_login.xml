@@ -147,6 +147,7 @@
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:text="Next"
+            android:onClick="inciarSesion"
             android:background="@drawable/cornersdegradado"
             android:textColor="@android:color/white"
             android:layout_marginTop="-32dp"
@@ -240,6 +241,7 @@
                         android:text=""
                         android:textColor="#ffffff"
                         android:layout_gravity=""
+                        android:onClick="loginButtons"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         />

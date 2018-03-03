@@ -51,10 +51,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private ImageView userPhoto;
     private Bitmap bitmap;
 
+    private FloatingActionButton addAnuncio;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        addAnuncio = findViewById(R.id.addAnuncio);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
 
@@ -158,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-            firebaseAuth.signOut();
+            firebaseAuth.getInstance().signOut();
 
             Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
                 @Override
@@ -222,3 +226,4 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         }
     }
+

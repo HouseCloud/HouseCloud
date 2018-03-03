@@ -4,7 +4,7 @@
     <string name="txvHC2">Cloud</string>
     <string name="not_login">No se puede iniciar sesión</string>
     <string name="not_firebase">No se pudo autentificar con Firebase</string>
-    <string name="facebook_app_id">946811222138035</string>
+    <string name="facebook_app_id">191868104733443</string>
     <string name="fb_login_protocol_scheme">fb946811222138035</string>
     <string name="not_facebook">No se ha podido iniciar sesión</string>
     <string name="error_facebook">Ha ocurrido un error</string>
