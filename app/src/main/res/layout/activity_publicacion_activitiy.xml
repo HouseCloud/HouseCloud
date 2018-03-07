@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degradado"
+    tools:context="com.housecloud.housecloud.PublicacionActivitiy">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sl_shadowColor="#1AA00000"
+            app:sl_cornerRadius="15dp"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners"
+                android:orientation="vertical"
+                android:paddingBottom="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PUBLICACIÓN"
+                    android:gravity="center"
+                    android:textSize="21dp"
+                    android:textColor="@android:color/black"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="25dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Titulo"/>
+
+                    <EditText
+                        android:id="@+id/etTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción"/>
+
+                    <EditText
+                        android:id="@+id/etDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoría"/>
+
+                    <EditText
+                        android:id="@+id/etCategoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subir imagenes:"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp">
+
+                        <ImageButton
+                            android:id="@+id/btnImg1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_up_arrow"/>
+
+                        <ImageButton
+                            android:id="@+id/btnImg2"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_up_arrow"/>
+
+                        <ImageButton
+                            android:id="@+id/btnImg3"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_up_arrow"/>
+
+                        <ImageButton
+                            android:id="@+id/btnImg4"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/ic_up_arrow"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnSubir"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cornersdegradado"
+                        android:text="Subir"
+                        android:textColor="@android:color/white"
+                        android:onClick="subirPublicacion"
+                        android:layout_marginTop="12dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </com.dd.ShadowLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -151,7 +151,6 @@
             android:background="@drawable/cornersdegradado"
             android:textColor="@android:color/white"
             android:layout_marginTop="-32dp"
-            android:onClick=""
             />
 
     </LinearLayout>
