@@ -215,7 +215,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         Log.d("importante","hola");
 
-        Intent intent = new Intent(this, MainActivity.class); 
+        Intent intent = new Intent(this, MainActivity.class);
         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
@@ -243,4 +243,5 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         i.putExtra("email",etUser.getText().toString().trim());
         startActivity(i);
     }
+
 }

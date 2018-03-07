@@ -34,7 +34,7 @@
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".PublicacionActivitiy"></activity>
+        <activity android:name=".PublicacionActivitiy" />
     </application>
 
 </manifest>

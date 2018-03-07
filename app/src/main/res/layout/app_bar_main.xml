@@ -10,15 +10,19 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            app:titleTextColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
             app:layout_collapseMode="pin"
-            app:layout_scrollFlags="enterAlways|scroll" />
+            app:layout_scrollFlags="enterAlways|scroll"
+            android:background="@color/colorAccent"
+            />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -30,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorAccent"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 </android.support.design.widget.CoordinatorLayout>
