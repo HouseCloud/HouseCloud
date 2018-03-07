@@ -161,6 +161,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         } else if (id == R.id.nav_share) {
 
+            Intent intent = new Intent(this, UsersActivity.class);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
         } else if (id == R.id.nav_send) {
             firebaseAuth.getInstance().signOut();
 

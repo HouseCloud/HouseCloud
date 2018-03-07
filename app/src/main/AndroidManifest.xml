@@ -35,6 +35,8 @@
             android:label="@string/title_activity_tabbed"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".PublicacionActivitiy" />
+        <activity android:name=".UsersActivity" />
+        <activity android:name=".ChatActivity" />
     </application>
 
 </manifest>
