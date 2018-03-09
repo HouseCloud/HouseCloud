@@ -64,7 +64,7 @@ public class TablonFragment extends Fragment {
         rvMain2 = (RecyclerView)v.findViewById(R.id.rvMain2);
         recogerDatosFirebase();
         rvMain2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        myRecyclerAdapter = new MyRecyclerAdapter(publicaciones);
+        myRecyclerAdapter = new MyRecyclerAdapter(getContext(), publicaciones);
 
         myRecyclerAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +86,7 @@ public class TablonFragment extends Fragment {
 
         refUsers = FirebaseDatabase.getInstance();
         refUsers.getReference().getRoot().child("users").addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 publicaciones.removeAll(publicaciones);
@@ -93,9 +94,14 @@ public class TablonFragment extends Fragment {
                         User user = snapshotUsers.getValue(User.class);
                         //users.add(user);
                         HashMap<String,Post> listP = user.getPosts();
-                        for(Post p  : listP.values()){
-                            publicaciones.add(p);
+                        try {
+                            for(Post p  : listP.values()){
+                                publicaciones.add(p);
+                            }
+                        }catch(Exception e){
+
                         }
+
                 }
                 myRecyclerAdapter.notifyDataSetChanged();
             }

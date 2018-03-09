@@ -15,19 +15,27 @@
       },
       "oauth_client": [
         {
+          "client_id": "549527318391-l9foi5u14ec67vcfvvofqqa7edu5u445.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.housecloud.housecloud",
+            "certificate_hash": "2d09530e0c746f0fe224b5b241d51da926975ea3"
+          }
+        },
+        {
+          "client_id": "549527318391-ta6u9kugn0mlem5rqm2p00sagh4ahn14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.housecloud.housecloud",
+            "certificate_hash": "16752b2105a47eada4a70934cebd6ea5621b9585"
+          }
+        },
+        {
           "client_id": "549527318391-mm0tqs8eg5qm8udc3b8icclr9ti6kun0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.housecloud.housecloud",
             "certificate_hash": "55d3ca942acc183e19cae00567bc191c10e5a585"
-          }
-        },
-        {
-          "client_id": "549527318391-t38cftbf4scqcsh7bkh4ahbldsmocjnc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.housecloud.housecloud",
-            "certificate_hash": "055e7a12d8726d2277dadf3a921386d67ac37cb8"
           }
         },
         {

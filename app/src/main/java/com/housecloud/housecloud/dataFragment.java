@@ -37,7 +37,7 @@ public class dataFragment extends Fragment {
     }
     private class sliderAdapter extends FragmentPagerAdapter{
 
-        final  String tabs[]={"tab1", "tab2"};
+        final  String tabs[]={"Servicios", "Favores"};
         public sliderAdapter(FragmentManager fm) {
             super(fm);
         }

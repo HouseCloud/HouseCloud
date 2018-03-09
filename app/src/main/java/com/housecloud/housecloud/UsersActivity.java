@@ -18,6 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class UsersActivity extends AppCompatActivity {
 
     private  RecyclerView mUsersLists;
@@ -114,6 +116,7 @@ public class UsersActivity extends AppCompatActivity {
             TextView userNameView = mView.findViewById(R.id.user_single_name);
             userNameView.setText(name);
         }
+        
 
     }
 

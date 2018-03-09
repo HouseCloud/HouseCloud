@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -34,6 +35,12 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.housecloud.housecloud.model.User;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     NavigationView navigationView;
     CoordinatorLayout contentMain;
     private float lastTranslate = 0.0f;
+    private DatabaseReference mDatabase;
 
     private GoogleApiClient googleApiClient;
     private FirebaseAuth firebaseAuth;
@@ -49,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private TextView emailUser, nameUser;
     private ImageView userPhoto;
+    private Bitmap bitmap;
 
     private FloatingActionButton addAnuncio;
 
@@ -224,8 +233,44 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             nameUser = (TextView) headerView.findViewById(R.id.nameUser);
             nameUser.setText(user.getDisplayName());
 
+
+        try {
+            mDatabase = FirebaseDatabase.getInstance().getReference();
             userPhoto = headerView.findViewById(R.id.userPhoto);
+            mDatabase.child("users").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    User user = dataSnapshot.getValue(User.class);
+                    try {
+                        Glide.with(MainActivity.this).load(user.getImage()).into(userPhoto);
+                        Log.d("VERIFICAR", "User name: " + user.getName()+ ", email " + user.getImage());
+                    }catch(Exception e){
+
+                    }
+
+
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.d("VERIFICAR", "Failed to read value");
+                }
+            });
+        }catch (Exception e){
+
+        }
+
+
+        try {
             Glide.with(this).load(user.getPhotoUrl()).into(userPhoto);
+        }catch (Exception e){
+
+        }
+
+
+            //
 
         }
     }

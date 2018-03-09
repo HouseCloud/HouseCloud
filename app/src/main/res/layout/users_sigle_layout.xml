@@ -5,13 +5,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingHorizontal="13dp"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         android:background="#fff">
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_google_plus"
             android:id="@+id/user_single_image"/>
 
@@ -26,13 +28,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Nombre"
+                android:paddingLeft="10dp"
                 android:id="@+id/user_single_name"
                 android:layout_weight="0.5"
                 android:gravity="left|center"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:text="Status"
                 android:id="@+id/user_single_status"
                 android:layout_weight="0.5"/>

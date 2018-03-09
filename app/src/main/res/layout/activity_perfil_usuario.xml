@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.housecloud.housecloud.PerfilUsuario"
+    android:background="@color/cardview_dark_background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:id="@+id/lyfoto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/angel"
+            android:id="@+id/imageUser"
+            android:background="@drawable/angel"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btmodificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CAMBIAR FOTO"
+        android:layout_below="@id/lyfoto"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR"
+        android:layout_below="@id/btmodificar"
+        />
+
+</RelativeLayout>

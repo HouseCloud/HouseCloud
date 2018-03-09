@@ -242,4 +242,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         startActivity(i);
     }
 
+    public void registrate(View view) {
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
+    }
+
 }

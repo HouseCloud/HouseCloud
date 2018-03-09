@@ -26,13 +26,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
+            android:paddingBottom="50dp"
             >
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/angelnube"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/angel"
                 android:layout_gravity="center|center_horizontal"
                 />
 
@@ -107,7 +107,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PASSWORD"
+                        android:text="CONTRASEÑA"
                         android:textColor="@color/colorTxvw"
                         android:paddingBottom="10dp"
                         android:paddingTop="20dp"
@@ -125,7 +125,7 @@
                         android:id="@+id/btnForgot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Forgot Password?"
+                        android:text="¿Olvidaste la contaseña?"
                         android:layout_gravity="right"
                         android:textAllCaps="false"
                         android:onClick="olvidarPassword"
@@ -146,7 +146,7 @@
             android:id="@+id/btNext"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="SIGUIENTE"
             android:onClick="inciarSesion"
             android:background="@drawable/cornersdegradado"
             android:textColor="@android:color/white"
@@ -176,7 +176,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Or with"/>
+                android:text="O con"/>
 
         </LinearLayout>
 
@@ -260,16 +260,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?"/>
+                android:text="¿Todavia no tienes cuenta?"/>
             <Button
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="Register"
+                android:text="Registrate"
                 android:textAllCaps="false"
                 android:padding="0dp"
                 android:background="@android:color/transparent"
                 android:textColor="@color/colorTxvw"
-                android:layout_marginLeft="-3dp"/>
+                android:layout_marginLeft="-3dp"
+                android:onClick="registrate"/>
 
         </LinearLayout>
 
