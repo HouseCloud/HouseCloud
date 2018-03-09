@@ -108,8 +108,8 @@ public class MenuActivity extends AppCompatActivity {
 
         public GridHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.ivMainImage);
-            textView = itemView.findViewById(R.id.tvCaption);
+            //imageView = itemView.findViewById(R.id.ivMainImage);
+            //textView = itemView.findViewById(R.id.tvCaption);
         }
     }
 }

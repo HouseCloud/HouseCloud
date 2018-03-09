@@ -68,6 +68,9 @@ public class RegisterActivity extends AppCompatActivity {
                             refIdUser.child("email").setValue(email);
                             refIdUser.child("phone").setValue(phone);
                             refIdUser.child("CP").setValue(cp);
+                            refIdUser.child("online").setValue("false");
+                            refIdUser.child("image").setValue("link_image");
+                            refIdUser.child("posts").setValue("");
                             pd.dismiss();
                             Toast.makeText(RegisterActivity.this,"Registro realizado con exito",Toast.LENGTH_SHORT).show();
                         }

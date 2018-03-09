@@ -30,28 +30,30 @@ public class PublicacionActivitiy extends AppCompatActivity {
     private StorageReference mStorage;
     private FirebaseAuth fAuth;
 
+    /*
     private static final int GALLERY_INTENT1 = 1;
     private static final int GALLERY_INTENT2 = 2;
     private static final int GALLERY_INTENT3 = 3;
     private static final int GALLERY_INTENT4 = 4;
-    private Uri uriSubida1,uriSubida2,uriSubida3,uriSubida4, uriDescarga;
+    private Uri uriSubida1,uriSubida2,uriSubida3,uriSubida4, uriDescarga;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publicacion_activitiy);
-
+        /*
         img1 = findViewById(R.id.btnImg1);
         img2 = findViewById(R.id.btnImg2);
         img3 = findViewById(R.id.btnImg3);
         img4 = findViewById(R.id.btnImg4);
-
+        */
         etTitulo = findViewById(R.id.etTitulo);
         etDescripcion = findViewById(R.id.etDescripcion);
         etCategoria = findViewById(R.id.etCategoria);
 
         fAuth = FirebaseAuth.getInstance();
 
+        /*
         mStorage = FirebaseStorage.getInstance().getReference();
 
         img1.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +91,9 @@ public class PublicacionActivitiy extends AppCompatActivity {
                 startActivityForResult(i,GALLERY_INTENT4);
             }
         });
+        */
     }
-
+    /*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -120,9 +123,10 @@ public class PublicacionActivitiy extends AppCompatActivity {
                     .into(img4);
         }
 
-    }
+    }*/
 
     public void subirPublicacion(View v) {
+        Intent i = getIntent();
         String titulo = etTitulo.getText().toString().trim();
         String descripcion = etDescripcion.getText().toString().trim();
         String categoria = etCategoria.getText().toString().trim();
@@ -131,19 +135,19 @@ public class PublicacionActivitiy extends AppCompatActivity {
         }else {
             //Subida de informacion del post
 
-            final DatabaseReference refRaiz = FirebaseDatabase.getInstance().getReference();
-            final DatabaseReference refTablon = refRaiz.child("posts");
-            /*
-            String titulo = etTitulo.getText().toString().trim();
-            String descripcion = etDescripcion.getText().toString().trim();
-            String categoria = etCategoria.getText().toString().trim();
-            */
-            DatabaseReference refIdUser = refTablon.child(fAuth.getCurrentUser().getUid());
-            DatabaseReference refPost = refIdUser.push();
+            DatabaseReference refRaiz = FirebaseDatabase.getInstance().getReference();
+            DatabaseReference refUsers = refRaiz.child("users").child(fAuth.getCurrentUser().getUid());
 
-            refPost.child("titulo").setValue(titulo);
-            refPost.child("descripcion").setValue(descripcion);
-            refPost.child("categoria").setValue(categoria);
+            DatabaseReference refPost = refUsers.child("posts");
+            DatabaseReference refIDPost = refPost.push();
+
+            refIDPost.child("titulo").setValue(titulo);
+            refIDPost.child("descripcion").setValue(descripcion);
+            refIDPost.child("categoria").setValue(categoria);
+            refIDPost.child("id_user").setValue(fAuth.getCurrentUser().getUid());
+
+           // finish();
+            /*
             // Subida de imagenes del post
 
             StorageReference filePath = mStorage.child("fotos").child(fAuth.getCurrentUser().getUid());
@@ -186,7 +190,7 @@ public class PublicacionActivitiy extends AppCompatActivity {
                     uriDescarga = taskSnapshot.getDownloadUrl();
                     Toast.makeText(PublicacionActivitiy.this, "Foto subida", Toast.LENGTH_SHORT).show();
                 }
-            });
+            });*/
         }
     }
 }

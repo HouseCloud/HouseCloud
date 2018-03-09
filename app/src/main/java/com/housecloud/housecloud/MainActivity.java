@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private TextView emailUser, nameUser;
     private ImageView userPhoto;
-    private Bitmap bitmap;
 
     private FloatingActionButton addAnuncio;
 

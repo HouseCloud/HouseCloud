@@ -23,12 +23,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/ivMainImage"
-                android:src="@mipmap/ic_launcher"
+
+            <TextView
+                android:id="@+id/tvTituloPost"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDescripcionPost"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/tvCategoriaPost"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
         </LinearLayout>
 
 
@@ -54,13 +66,11 @@
                 android:gravity="center"/>
 
             <TextView
-                android:id="@+id/tvCaption"
+                android:id="@+id/tvNombreUser"
                 android:layout_width="match_parent"
                 android:gravity="right|center"
                 android:layout_height="50dp"
-                android:text="default caption"
                 android:background="@android:color/white"
-
                 android:layout_gravity="top"/>
 
         </LinearLayout>

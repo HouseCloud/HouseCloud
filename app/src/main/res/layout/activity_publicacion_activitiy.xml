@@ -74,46 +74,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Subir imagenes:"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:paddingTop="8dp">
-
-                        <ImageButton
-                            android:id="@+id/btnImg1"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginRight="8dp"
-                            android:background="@drawable/ic_up_arrow"/>
-
-                        <ImageButton
-                            android:id="@+id/btnImg2"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginRight="8dp"
-                            android:background="@drawable/ic_up_arrow"/>
-
-                        <ImageButton
-                            android:id="@+id/btnImg3"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginRight="8dp"
-                            android:background="@drawable/ic_up_arrow"/>
-
-                        <ImageButton
-                            android:id="@+id/btnImg4"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:background="@drawable/ic_up_arrow"/>
-
-                    </LinearLayout>
 
                     <Button
                         android:id="@+id/btnSubir"
