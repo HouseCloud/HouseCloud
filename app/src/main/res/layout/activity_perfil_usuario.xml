@@ -4,37 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
     tools:context="com.housecloud.housecloud.PerfilUsuario"
-    android:background="@color/cardview_dark_background">
+    android:background="@android:color/white">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="380dp"
         android:gravity="center"
+        android:paddingTop="150dp"
         android:id="@+id/lyfoto">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageUser"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/angel"
-            android:id="@+id/imageUser"
-            android:background="@drawable/angel"/>
+            android:background="@drawable/angel"
+            android:src="@drawable/angel" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btmodificar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lyfoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/lyfoto"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/cornersdegradado"
         android:text="CAMBIAR FOTO"
-        android:layout_below="@id/lyfoto"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GUARDAR"
-        android:layout_below="@id/btmodificar"
-        />
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
