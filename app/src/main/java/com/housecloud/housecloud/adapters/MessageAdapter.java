@@ -1,4 +1,4 @@
-package com.housecloud.housecloud;
+package com.housecloud.housecloud.adapters;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.housecloud.housecloud.model.Messages;
+import com.housecloud.housecloud.R;
 
 import java.util.List;
 

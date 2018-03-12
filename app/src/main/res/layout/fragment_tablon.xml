@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.housecloud.housecloud.TablonFragment"
+    tools:context="com.housecloud.housecloud.fragments.TablonFragment"
     android:background="@color/colorTablon">
 
     <LinearLayout

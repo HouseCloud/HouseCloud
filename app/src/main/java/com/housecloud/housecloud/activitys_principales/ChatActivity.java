@@ -1,7 +1,6 @@
-package com.housecloud.housecloud;
+package com.housecloud.housecloud.activitys_principales;
 
 import android.content.Context;
-import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +23,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
+import com.housecloud.housecloud.model.Messages;
+import com.housecloud.housecloud.R;
+import com.housecloud.housecloud.adapters.MessageAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

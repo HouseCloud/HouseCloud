@@ -1,4 +1,4 @@
-package com.housecloud.housecloud;
+package com.housecloud.housecloud.model;
 
 /**
  * Created by alberto on 4/3/18.

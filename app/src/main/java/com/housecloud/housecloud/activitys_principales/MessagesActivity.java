@@ -1,4 +1,4 @@
-package com.housecloud.housecloud;
+package com.housecloud.housecloud.activitys_principales;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -8,6 +8,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toolbar;
+
+import com.housecloud.housecloud.R;
+import com.housecloud.housecloud.fragments.ChatsFragment;
+import com.housecloud.housecloud.fragments.FriendsFragment;
+import com.housecloud.housecloud.fragments.RequestsFragment;
 
 public class MessagesActivity extends AppCompatActivity {
 

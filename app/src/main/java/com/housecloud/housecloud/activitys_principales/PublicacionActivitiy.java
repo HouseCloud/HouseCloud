@@ -1,29 +1,37 @@
-package com.housecloud.housecloud;
+package com.housecloud.housecloud.activitys_principales;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
+import com.housecloud.housecloud.R;
+import com.housecloud.housecloud.adapters.CategoriaAdapter;
+import com.housecloud.housecloud.model.Categoria;
+
+import java.util.ArrayList;
 
 public class PublicacionActivitiy extends AppCompatActivity {
 
     private ImageButton img1,img2,img3,img4;
 
-    private EditText etTitulo,etDescripcion,etCategoria;
+    private EditText etTitulo,etDescripcion;
+
+    private Spinner spCategoria;
+    private Categoria c;
+
+    private ArrayList<Categoria> categorias;
+    private CategoriaAdapter cAdapter;
 
     private Button subir;
 
@@ -40,7 +48,7 @@ public class PublicacionActivitiy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_publicacion_activitiy);
+        setContentView(R.layout.activity_publicacion);
         /*
         img1 = findViewById(R.id.btnImg1);
         img2 = findViewById(R.id.btnImg2);
@@ -49,9 +57,13 @@ public class PublicacionActivitiy extends AppCompatActivity {
         */
         etTitulo = findViewById(R.id.etTitulo);
         etDescripcion = findViewById(R.id.etDescripcion);
-        etCategoria = findViewById(R.id.etCategoria);
+        spCategoria = findViewById(R.id.spCategoria);
+
+        iniciarListCategoria();
 
         fAuth = FirebaseAuth.getInstance();
+
+        cargarCategorias();
 
         /*
         mStorage = FirebaseStorage.getInstance().getReference();
@@ -93,6 +105,32 @@ public class PublicacionActivitiy extends AppCompatActivity {
         });
         */
     }
+
+    private void cargarCategorias() {
+        cAdapter = new CategoriaAdapter(this,categorias);
+        spCategoria.setAdapter(cAdapter);
+
+        spCategoria.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                c = (Categoria) adapterView.getItemAtPosition(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+
+    private void iniciarListCategoria() {
+        categorias = new ArrayList<Categoria>();
+        categorias.add(new Categoria("Herramientas", R.drawable.ic_herramientas));
+        categorias.add(new Categoria("Ropa",R.drawable.ic_ropa));
+        categorias.add(new Categoria("Jardinería",R.drawable.ic_jardineria));
+        categorias.add(new Categoria("Electrodomésticos",R.drawable.ic_electrodomesticos));
+        categorias.add(new Categoria("Electrónica",R.drawable.ic_electronica));
+    }
     /*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -129,7 +167,7 @@ public class PublicacionActivitiy extends AppCompatActivity {
         Intent i = getIntent();
         String titulo = etTitulo.getText().toString().trim();
         String descripcion = etDescripcion.getText().toString().trim();
-        String categoria = etCategoria.getText().toString().trim();
+        String categoria = c.getCategoria().toString();
         if(titulo.equals("") || descripcion.equals("") || categoria.equals("")){
             Toast.makeText(this,"Debe rellenar todos los campos",Toast.LENGTH_SHORT).show();
         }else {
@@ -146,7 +184,7 @@ public class PublicacionActivitiy extends AppCompatActivity {
             refIDPost.child("categoria").setValue(categoria);
             refIDPost.child("id_user").setValue(fAuth.getCurrentUser().getUid());
 
-           // finish();
+            finish();
             /*
             // Subida de imagenes del post
 

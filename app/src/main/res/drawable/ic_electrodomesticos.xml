@@ -1,0 +1,14 @@
+<vector android:height="24dp" android:viewportHeight="512.0"
+    android:viewportWidth="512.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#878787" android:pathData="M256,156.8c-70.6,0 -128.1,57.5 -128.1,128.1s57.5,128.1 128.1,128.1s128.1,-57.5 128.1,-128.1S326.6,156.8 256,156.8zM256,397.3c-62,0 -112.4,-50.4 -112.4,-112.4s50.4,-112.4 112.4,-112.4s112.4,50.4 112.4,112.4S317.9,397.3 256,397.3z"/>
+    <path android:fillColor="#878787" android:pathData="M355.4,382.8c-25.2,25.7 -58.9,40.5 -94.9,41.6l0.5,15.7c40,-1.2 77.6,-17.6 105.6,-46.3L355.4,382.8z"/>
+    <path android:fillColor="#878787" android:pathData="M148.5,175.7l11,11.2c26,-25.5 60.4,-39.5 96.9,-39.5v-15.7C215.8,131.7 177.5,147.4 148.5,175.7z"/>
+    <path android:fillColor="#878787" android:pathData="M65.2,0v486.1h381.6V0H65.2zM80.9,15.7h88.8v68H80.9V15.7zM431.1,470.4H80.9V99.3H431.1V470.4zM431.1,83.6H185.4V15.7H431.1V83.6z"/>
+    <path android:fillColor="#878787" android:pathData="M256,198.6c-47.6,0 -86.2,38.7 -86.2,86.2c0,47.6 38.7,86.2 86.2,86.2s86.2,-38.7 86.2,-86.2C342.2,237.3 303.5,198.6 256,198.6zM256,214.3c36.3,0 66.2,27.5 70.1,62.7H185.8C189.8,241.8 219.7,214.3 256,214.3zM256,355.4c-36.3,0 -66.2,-27.5 -70.1,-62.7h140.2C322.2,328 292.2,355.4 256,355.4z"/>
+    <path android:fillColor="#878787" android:pathData="M125.3,26.1c-13,0 -23.5,10.6 -23.5,23.5c0,13 10.6,23.5 23.5,23.5s23.5,-10.6 23.5,-23.5C148.8,36.7 138.3,26.1 125.3,26.1zM125.3,57.5c-4.3,0 -7.8,-3.5 -7.8,-7.8c0,-4.3 3.5,-7.8 7.8,-7.8c4.3,0 7.8,3.5 7.8,7.8C133.1,54 129.6,57.5 125.3,57.5z"/>
+    <path android:fillColor="#878787" android:pathData="M313.5,41.8h15.7v15.7h-15.7z"/>
+    <path android:fillColor="#878787" android:pathData="M386.7,41.8h15.7v15.7h-15.7z"/>
+    <path android:fillColor="#878787" android:pathData="M350.1,41.8h15.7v15.7h-15.7z"/>
+    <path android:fillColor="#878787" android:pathData="M94,496.3h52.3v15.7h-52.3z"/>
+    <path android:fillColor="#878787" android:pathData="M365.8,496.3h52.3v15.7h-52.3z"/>
+</vector>

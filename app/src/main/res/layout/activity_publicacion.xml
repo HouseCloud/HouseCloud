@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/degradado"
-    tools:context="com.housecloud.housecloud.PublicacionActivitiy">
+    tools:context="com.housecloud.housecloud.activitys_principales.PublicacionActivitiy">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,22 +62,25 @@
                     <EditText
                         android:id="@+id/etDescripcion"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Categoría"/>
+                        android:text="Categoría"
+                        android:layout_marginBottom="10dp"/>
 
-                    <EditText
-                        android:id="@+id/etCategoria"
+                    <Spinner
+                        android:id="@+id/spCategoria"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"/>
 
 
                     <Button
                         android:id="@+id/btnSubir"
-                        android:layout_width="260dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/cornersdegradado"
                         android:text="Subir"
