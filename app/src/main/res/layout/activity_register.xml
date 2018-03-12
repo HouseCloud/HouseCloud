@@ -202,8 +202,8 @@
 
                 <ImageButton
                     android:id="@+id/btnImgUser"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginRight="8dp"
                     android:background="@drawable/ic_up_arrow"/>
 
