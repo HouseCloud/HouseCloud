@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HC.iml" filepath="$PROJECT_DIR$/HC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HouseCloud.iml" filepath="$PROJECT_DIR$/HouseCloud.iml" />
       <module fileurl="file://C:\HouseCloudProject\HC\HouseCloud.iml" filepath="C:\HouseCloudProject\HC\HouseCloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

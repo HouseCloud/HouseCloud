@@ -31,7 +31,6 @@
             android:name=".activitys_principales.RegisterActivity"
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".LoginActivity0" />
         <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
